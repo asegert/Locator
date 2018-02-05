@@ -1,0 +1,25 @@
+{
+    "rounds":[
+        {
+            "standardImage": "gun",
+            "locateImage": "silencerGun",
+            "locateFunction": "spritesheet",
+            "params": "gunSprite",
+            "locateNum": 10,
+            "particles": "bullets",
+            "findText": "Guns with Silencers to Find: ",
+            "board": [
+                  ["S", "S", "S", "L", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "L", "S", "S", "S"],
+                  ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "L", "S", "S", "S", "L", "S"],
+                  ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "L", "S", "S", "L", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
+                ]
+        }
+    ]
+}
