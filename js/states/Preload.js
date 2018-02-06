@@ -15,10 +15,16 @@ Locator.PreloadState = {
             'image': [
                              ['gun', 'assets/images/gun.png'],
                              ['silencerGun', 'assets/images/silencerGun.png'],
-                             //['silencerGun', 'assets/images/silencerGun.png'],
+                             ['bullet', 'assets/images/bullet.png'],
+                             ['passport', 'assets/images/passport.png'],
+                             ['passportBlack', 'assets/images/passportBlack.png'],
+                             //['bullet', 'assets/images/bullet.png'],
+                             ['usb', 'assets/images/usb.png'],
+                             ['usbYellow', 'assets/images/usbYellow.png'],
+                             //['bullet', 'assets/images/bullet.png'],
 	                    ],
             'spritesheet': [
-                            ['gunSprite', 'assets/images/gunSprite.png', 52, 39],
+                            ['gunSprite', 'assets/images/gunSprite.png', 52, 39, 5],
 	                       ],
             'audio': [
 		                    //['boing', ['assets/audio/boing.mp3', 'assets/audio/boing.ogg']],

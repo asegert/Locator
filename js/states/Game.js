@@ -17,7 +17,7 @@ Locator.GameState = {
         //Total unlucky ones to find
         this.totalUnlucky = this.gameData.rounds[this.currRound].locateNum;
         //Displays what needs to be found
-        this.totalText = this.add.text(280, 0, this.gameData.rounds[this.currRound].findText+this.totalUnlucky);
+        this.totalText = this.add.text(280, 0, this.gameData.rounds[this.currRound].findText+this.totalUnlucky + this.gameData.rounds[this.currRound].hintText);
         
         this.hint = this.add.sprite(0, 0, 'hint');
         this.hint.inputEnabled = true;
@@ -54,17 +54,17 @@ Locator.GameState = {
                 }
                 else
                 {
-                    var texture = gameData.rounds[this.currRound].standardImage
+                    var texture = gameData.rounds[this.currRound].standardImage[Math.floor(Math.random() * gameData.rounds[this.currRound].standardImage.length)];
                 }
                 var button = this.add.sprite(250 + (50 * i), 75 + (50 * j), texture);
                 button.anchor.setTo(0.5, 0.5);
                 button.inputEnabled = true;
                 button.events.onInputDown.add(function(button)
-                {
-                    this.totalUnlucky--;
-                    
-                    if(button.key != gameData.rounds[this.currRound].standardImage && !this.moving)
+                {   
+                    if(this.isLocatorKey(button) && !this.moving)
                     {
+                        this.totalUnlucky--;
+                        this.moving = true;
                         if(gameData.rounds[this.currRound].locateFunction == 'spritesheet')
                         {
                             this.spritesheetTransition(gameData.rounds[this.currRound].params, button);
@@ -77,7 +77,7 @@ Locator.GameState = {
                         {
                             this.rotateTransition(button);
                         }
-                        this.totalText.setText(gameData.rounds[this.currRound].findText+this.totalUnlucky);
+                        this.totalText.setText(this.gameData.rounds[this.currRound].findText+this.totalUnlucky + this.gameData.rounds[this.currRound].hintText);
                     }
                 }, this);
                 
@@ -92,13 +92,47 @@ Locator.GameState = {
             }
         }
     },
+    isLocatorKey: function(button)
+    {
+        for(var i =0, len = this.gameData.rounds[this.currRound].standardImage.length; i < len; i++)
+        {
+            if(button.key != this.gameData.rounds[this.currRound].standardImage[i])
+            {
+                return true;
+            }
+        }
+        return false;
+    },
     spritesheetTransition: function(spritesheet, button)
     {
-        
+        button.loadTexture(spritesheet);
+        var spriteTransform = button.animations.add('spritesheet');
+        button.animations.play('spritesheet', 20, false);
+        spriteTransform.onComplete.add(function()
+        {
+            if(this.totalUnlucky==0)
+            {
+                this.nextMove();
+            }
+            this.moving = false;
+        }, this);
     },
     colourTransition: function(button)
     {
-        
+        var out = this.add.tween(button).to({alpha: 0}, 50, "Linear", true);
+        out.onComplete.add(function()
+        {
+            button.loadTexture(this.gameData.rounds[this.currRound].standardImage[Math.floor(Math.random() * this.gameData.rounds[this.currRound].standardImage.length)]);
+            var backIn = this.add.tween(button).to({alpha: 1}, 50, "Linear", true);
+            backIn.onComplete.add(function()
+            {
+                if(this.totalUnlucky==0)
+                {
+                    this.nextMove();
+                }
+                this.moving = false;
+            }, this);
+        }, this);
     },
     rotateTransition: function(button)
     {
@@ -106,34 +140,51 @@ Locator.GameState = {
         tween.onComplete.add(function(button)
         {
             button.rotation = 0;
-            button.loadTexture(this.gameData.rounds[this.currRound].standardImage);
+            button.loadTexture(thisgameData.rounds[this.currRound].standardImage[Math.floor(Math.random() * gameData.rounds[this.currRound].standardImage.length)]);
             if(this.totalUnlucky==0)
             {
-                this.currRound++;
-                if(this.currRound > this.gameData.rounds.length)
-                {
-                    this.endGame();
-                }
-                else
-                {
-                    this.newRound();
-                }
-                /*this.totalText.destroy();
-                this.hint.destroy();
-                this.rotators.removeAll();
-                this.others.removeAll();
-                this.state.processWin(gameData.rounds[this.currRound].switch);*/
+                this.nextMove();
             }
             this.moving = false;
        }, this);
     },
+    nextMove: function()
+    {
+        this.currRound++;
+        
+        if(this.currRound >= this.gameData.rounds.length)
+        {
+            this.endGame();
+        }
+        else
+        {
+            this.newRound();
+        }
+    },
     newRound: function()
     {
+        this.rotators.forEach(function(rotator)
+        {
+            rotator.destroy();
+        }, this);
+        this.rotators.removeAll();
         
+        this.others.forEach(function(other)
+        {
+            other.destroy();
+        }, this);
+        this.others.removeAll();
+
+        this.totalUnlucky = this.gameData.rounds[this.currRound].locateNum;
+        this.totalText.setText(this.gameData.rounds[this.currRound].findText+this.totalUnlucky + this.gameData.rounds[this.currRound].hintText);
+        this.initBoard(this.gameData);
     },
     endGame: function()
     {
-        
+        this.totalText.destroy();
+        this.hint.destroy();
+        this.rotators.removeAll();
+        this.others.removeAll();
     }
 }
 /*Copyright (C) Wayside Co. - All Rights Reserved
