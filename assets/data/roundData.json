@@ -9,6 +9,8 @@
             "particles": "bullet",
             "findText": "Guns with Silencers to Find: ",
             "hintText": "",
+            "fTextX": 280,
+            "hTextX": 250,
             "board": [
                   ["S", "S", "S", "L", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
@@ -23,6 +25,54 @@
                 ]
         },
         {
+            "standardImage": ["fingerprintR"],
+            "locateImage": "fingerprintL",
+            "locateFunction": "rotate",
+            "params": 1,
+            "locateNum": 7,
+            "particles": "bullet",
+            "findText": "Guns with Silencers to Find: ",
+            "hintText": "",
+            "fTextX": 280,
+            "hTextX": 250,
+            "board": [
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "L", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "L", "S", "S", "S", "L", "S"],
+                  ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "L", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
+                ]
+        },
+        {
+            "standardImage": ["usb"],
+            "locateImage": "usbYellow",
+            "locateFunction": "colour",
+            "params": null,
+            "locateNum": 25,
+            "particles": "bullet",
+            "findText": "Compromised USBs to Find: ",
+            "hintText": "",
+            "fTextX": 280,
+            "hTextX": 250,
+            "board": [
+                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
+                  ["L", "S", "L", "S", "S", "S", "S", "L", "S", "L"],
+                  ["S", "S", "S", "S", "S", "L", "L", "S", "S", "S"],
+                  ["S", "S", "L", "S", "S", "S", "L", "S", "L", "S"],
+                  ["L", "S", "S", "L", "L", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "L", "S", "L"],
+                  ["S", "S", "L", "S", "L", "L", "S", "S", "L", "S"],
+                  ["S", "L", "S", "S", "S", "S", "L", "L", "S", "S"],
+                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
+                  ["L", "S", "S", "S", "S", "S", "S", "S", "S", "L"]
+                ]
+        },
+        {
             "standardImage": ["passport"],
             "locateImage": "passportBlack",
             "locateFunction": "colour",
@@ -31,6 +81,8 @@
             "particles": "bullet",
             "findText": "Enemy Passports to Find: ",
             "hintText": "",
+            "fTextX": 280,
+            "hTextX": 250,
             "board": [
                   ["S", "S", "S", "L", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
@@ -45,25 +97,27 @@
                 ]
         },
         {
-            "standardImage": ["usb"],
-            "locateImage": "usbYellow",
+            "standardImage": ["blonde", "white", "black", "red"],
+            "locateImage": "brown",
             "locateFunction": "colour",
             "params": null,
-            "locateNum": 25,
+            "locateNum": 15,
             "particles": "bullet",
-            "findText": "Compromised USBs to Find: ",
-            "hintText": "",
+            "findText": "Enemy Agents to Find: ",
+            "hintText": "(Hint: Enemy agents are Brunettes)",
+            "fTextX": 310,
+            "hTextX": 250,
             "board": [
-                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
-                  ["L", "S", "L", "S", "S", "S", "S", "L", "S", "L"],
+                  ["S", "S", "S", "L", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "L"],
                   ["S", "S", "S", "S", "S", "L", "L", "S", "S", "S"],
-                  ["S", "S", "L", "S", "S", "S", "L", "S", "L", "S"],
-                  ["L", "S", "S", "L", "L", "S", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "S", "S", "S", "L", "S", "L"],
-                  ["S", "S", "L", "S", "L", "L", "S", "S", "L", "S"],
-                  ["S", "L", "S", "S", "S", "S", "L", "L", "S", "S"],
-                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
-                  ["L", "S", "S", "S", "S", "S", "S", "S", "S", "L"]
+                  ["L", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "L", "S", "S", "L", "L", "S"],
+                  ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "L", "S", "S", "L", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "L", "S"],
+                  ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ]
         }
     ]

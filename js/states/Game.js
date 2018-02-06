@@ -17,7 +17,8 @@ Locator.GameState = {
         //Total unlucky ones to find
         this.totalUnlucky = this.gameData.rounds[this.currRound].locateNum;
         //Displays what needs to be found
-        this.totalText = this.add.text(280, 0, this.gameData.rounds[this.currRound].findText+this.totalUnlucky + this.gameData.rounds[this.currRound].hintText);
+        this.totalText = this.add.text(this.gameData.rounds[this.currRound].fTextX, 0, this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n");
+        this.hintText = this.add.text(this.gameData.rounds[this.currRound].hTextX, 50, this.gameData.rounds[this.currRound].hintText);
         
         this.hint = this.add.sprite(0, 0, 'hint');
         this.hint.inputEnabled = true;
@@ -56,12 +57,12 @@ Locator.GameState = {
                 {
                     var texture = gameData.rounds[this.currRound].standardImage[Math.floor(Math.random() * gameData.rounds[this.currRound].standardImage.length)];
                 }
-                var button = this.add.sprite(250 + (50 * i), 75 + (50 * j), texture);
+                var button = this.add.sprite(250 + (50 * i), 125 + (50 * j), texture);
                 button.anchor.setTo(0.5, 0.5);
                 button.inputEnabled = true;
                 button.events.onInputDown.add(function(button)
                 {   
-                    if(this.isLocatorKey(button) && !this.moving)
+                    if(button.key == this.gameData.rounds[this.currRound].locateImage && !this.moving)
                     {
                         this.totalUnlucky--;
                         this.moving = true;
@@ -77,7 +78,8 @@ Locator.GameState = {
                         {
                             this.rotateTransition(button);
                         }
-                        this.totalText.setText(this.gameData.rounds[this.currRound].findText+this.totalUnlucky + this.gameData.rounds[this.currRound].hintText);
+                        this.totalText.setText(this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n");
+                        this.hintText.setText(this.gameData.rounds[this.currRound].hintText);
                     }
                 }, this);
                 
@@ -91,17 +93,6 @@ Locator.GameState = {
                 }
             }
         }
-    },
-    isLocatorKey: function(button)
-    {
-        for(var i =0, len = this.gameData.rounds[this.currRound].standardImage.length; i < len; i++)
-        {
-            if(button.key != this.gameData.rounds[this.currRound].standardImage[i])
-            {
-                return true;
-            }
-        }
-        return false;
     },
     spritesheetTransition: function(spritesheet, button)
     {
@@ -136,11 +127,11 @@ Locator.GameState = {
     },
     rotateTransition: function(button)
     {
-        var tween = this.add.tween(button).to( { rotation: 3.15 }, 1000, Phaser.Easing.Bounce.Out, true);
+        var tween = this.add.tween(button).to( { rotation: this.gameData.rounds[this.currRound].params}, 1000, Phaser.Easing.Bounce.Out, true);
         tween.onComplete.add(function(button)
         {
             button.rotation = 0;
-            button.loadTexture(thisgameData.rounds[this.currRound].standardImage[Math.floor(Math.random() * gameData.rounds[this.currRound].standardImage.length)]);
+            button.loadTexture(Locator.GameState.gameData.rounds[this.currRound].standardImage[Math.floor(Math.random() * Locator.GameState.gameData.rounds[this.currRound].standardImage.length)]);
             if(this.totalUnlucky==0)
             {
                 this.nextMove();
@@ -176,12 +167,16 @@ Locator.GameState = {
         this.others.removeAll();
 
         this.totalUnlucky = this.gameData.rounds[this.currRound].locateNum;
-        this.totalText.setText(this.gameData.rounds[this.currRound].findText+this.totalUnlucky + this.gameData.rounds[this.currRound].hintText);
+        this.totalText.destroy();
+        this.hintText.destroy()
+        this.totalText = this.add.text(this.gameData.rounds[this.currRound].fTextX, 0, this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n");
+        this.hintText = this.add.text(this.gameData.rounds[this.currRound].hTextX, 50, this.gameData.rounds[this.currRound].hintText);
         this.initBoard(this.gameData);
     },
     endGame: function()
     {
         this.totalText.destroy();
+        this.hintText.destroy();
         this.hint.destroy();
         this.rotators.removeAll();
         this.others.removeAll();

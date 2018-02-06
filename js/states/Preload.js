@@ -22,6 +22,13 @@ Locator.PreloadState = {
                              ['usb', 'assets/images/usb.png'],
                              ['usbYellow', 'assets/images/usbYellow.png'],
                              //['bullet', 'assets/images/bullet.png'],
+                             ['blonde', 'assets/images/ladyBlondeSmall.png'],
+                             ['white', 'assets/images/ladyWhiteSmall.png'],
+                             ['brown', 'assets/images/ladyBrownSmall.png'],
+                             ['black', 'assets/images/ladyBlackSmall.png'],
+                             ['red', 'assets/images/ladyRedSmall.png'],
+                             ['fingerprintR', 'assets/images/fingerprintRight.png'],
+                             ['fingerprintL', 'assets/images/fingerprintLeft.png'],
 	                    ],
             'spritesheet': [
                             ['gunSprite', 'assets/images/gunSprite.png', 52, 39, 5],
