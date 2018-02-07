@@ -48,7 +48,7 @@
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
-            "storyText": "Find ___ fingerprints to update our files."
+            "storyText": "Find - fingerprints to update our files."
         },
         {
             "standardImage": ["usb"],
@@ -131,5 +131,21 @@
         "Can you do it Agent?"
     ],
     "nameM": "Man",
-    "nameF": "Woman"
+    "nameF": "Woman",
+    "storySpecs":{
+        "mainOffset": 90,
+        "secondaryOffset": 95,
+        "indentMain": "",
+        "indentSecondary": "\t\t\t\t\t\t\t\t",
+        "images": [
+            {
+                "line": 1,
+                "word": 12,
+                "image": "partners",
+                "rotation": 6.5
+            }
+        ],
+     "wordDelay": 120,
+     "lineDelay": 400
+    }
 }
