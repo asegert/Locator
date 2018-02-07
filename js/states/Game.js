@@ -18,7 +18,7 @@ Locator.GameState = {
         this.totalUnlucky = this.gameData.rounds[this.currRound].locateNum;
         //Displays what needs to be found
         this.totalText = this.add.text(this.gameData.rounds[this.currRound].fTextX, 0, this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n");
-        this.hintText = this.add.text(this.gameData.rounds[this.currRound].hTextX, 50, this.gameData.rounds[this.currRound].hintText);
+        this.hintText = this.add.text(this.gameData.rounds[this.currRound].hTextX, 50, this.gameData.rounds[this.currRound].hintText[Locator.gender]);
         
         this.hint = this.add.sprite(0, 0, 'hint');
         this.hint.inputEnabled = true;
@@ -27,7 +27,7 @@ Locator.GameState = {
             var hinted = false;
             this.rotators.forEach(function(rotator)
             {
-                if(rotator.key == this.gameData.rounds[this.currRound].locateImage && !hinted)
+                if(rotator.key == this.gameData.rounds[this.currRound].locateImage[Locator.gender] && !hinted)
                 {
                     var emitter = this.add.emitter(rotator.x, rotator.y, 200);
                     emitter.makeParticles(this.gameData.rounds[this.currRound].particles);
@@ -51,18 +51,18 @@ Locator.GameState = {
             {
                 if(gameData.rounds[this.currRound].board[i][j]=="L")
                 {
-                    var texture = gameData.rounds[this.currRound].locateImage;
+                    var texture = gameData.rounds[this.currRound].locateImage[Locator.gender];
                 }
                 else
                 {
-                    var texture = gameData.rounds[this.currRound].standardImage[Math.floor(Math.random() * gameData.rounds[this.currRound].standardImage.length)];
+                    var texture = gameData.rounds[this.currRound].standardImage[Locator.gender][Math.floor(Math.random() * gameData.rounds[this.currRound].standardImage[Locator.gender].length)];
                 }
                 var button = this.add.sprite(250 + (50 * i), 125 + (50 * j), texture);
                 button.anchor.setTo(0.5, 0.5);
                 button.inputEnabled = true;
                 button.events.onInputDown.add(function(button)
                 {   
-                    if(button.key == this.gameData.rounds[this.currRound].locateImage && !this.moving)
+                    if(button.key == this.gameData.rounds[this.currRound].locateImage[Locator.gender] && !this.moving)
                     {
                         this.totalUnlucky--;
                         this.moving = true;
@@ -79,7 +79,7 @@ Locator.GameState = {
                             this.rotateTransition(button);
                         }
                         this.totalText.setText(this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n");
-                        this.hintText.setText(this.gameData.rounds[this.currRound].hintText);
+                        this.hintText.setText(this.gameData.rounds[this.currRound].hintText[Locator.gender]);
                     }
                 }, this);
                 
@@ -113,7 +113,7 @@ Locator.GameState = {
         var out = this.add.tween(button).to({alpha: 0}, 50, "Linear", true);
         out.onComplete.add(function()
         {
-            button.loadTexture(this.gameData.rounds[this.currRound].standardImage[Math.floor(Math.random() * this.gameData.rounds[this.currRound].standardImage.length)]);
+            button.loadTexture(this.gameData.rounds[this.currRound].standardImage[Locator.gender][Math.floor(Math.random() * this.gameData.rounds[this.currRound].standardImage[Locator.gender].length)]);
             var backIn = this.add.tween(button).to({alpha: 1}, 50, "Linear", true);
             backIn.onComplete.add(function()
             {
@@ -131,7 +131,7 @@ Locator.GameState = {
         tween.onComplete.add(function(button)
         {
             button.rotation = 0;
-            button.loadTexture(Locator.GameState.gameData.rounds[this.currRound].standardImage[Math.floor(Math.random() * Locator.GameState.gameData.rounds[this.currRound].standardImage.length)]);
+            button.loadTexture(Locator.GameState.gameData.rounds[this.currRound].standardImage[Locator.gender][Math.floor(Math.random() * Locator.GameState.gameData.rounds[this.currRound].standardImage[Locator.gender].length)]);
             if(this.totalUnlucky==0)
             {
                 this.nextMove();
@@ -170,7 +170,7 @@ Locator.GameState = {
         this.totalText.destroy();
         this.hintText.destroy()
         this.totalText = this.add.text(this.gameData.rounds[this.currRound].fTextX, 0, this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n");
-        this.hintText = this.add.text(this.gameData.rounds[this.currRound].hTextX, 50, this.gameData.rounds[this.currRound].hintText);
+        this.hintText = this.add.text(this.gameData.rounds[this.currRound].hTextX, 50, this.gameData.rounds[this.currRound].hintText[Locator.gender]);
         this.initBoard(this.gameData);
     },
     endGame: function()

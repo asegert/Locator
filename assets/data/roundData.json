@@ -1,14 +1,23 @@
 {
     "rounds":[
         {
-            "standardImage": ["gun"],
-            "locateImage": "silencerGun",
+            "standardImage": {
+                "male":["gun"],
+                "female":["gun"]
+            },
+            "locateImage": {
+                "male": "silencerGun",
+                "female": "silencerGun"
+            },
             "locateFunction": "spritesheet",
             "params": "gunSprite",
             "locateNum": 10,
             "particles": "bullet",
             "findText": "Guns with Silencers to Find: ",
-            "hintText": "",
+            "hintText": {
+                "male": "",
+                "female": ""
+            },
             "fTextX": 280,
             "hTextX": 250,
             "board": [
@@ -26,14 +35,23 @@
             "storyText": "Round up all of agent ____’s guns, __ has silencers on all of them so it should be easy to find them."
         },
         {
-            "standardImage": ["fingerprintR"],
-            "locateImage": "fingerprintL",
+            "standardImage": {
+                "male":["fingerprintR"],
+                "female":["fingerprintR"]
+            },
+            "locateImage": {
+                "male": "fingerprintL",
+                "female": "fingerprintL"
+            },
             "locateFunction": "rotate",
             "params": 1,
             "locateNum": 7,
             "particles": "bullet",
             "findText": "FingerPrints to Find: ",
-            "hintText": "",
+            "hintText": {
+                "male": "",
+                "female": ""
+            },
             "fTextX": 280,
             "hTextX": 250,
             "board": [
@@ -51,14 +69,23 @@
             "storyText": "Find - fingerprints to update our files."
         },
         {
-            "standardImage": ["usb"],
-            "locateImage": "usbYellow",
+            "standardImage": {
+                "male":["usb"],
+                "female":["usb"]
+            },
+            "locateImage": {
+                "male": "usbYellow",
+                "female": "usbYellow"
+            },
             "locateFunction": "colour",
             "params": null,
             "locateNum": 25,
             "particles": "bullet",
             "findText": "Compromised USBs to Find: ",
-            "hintText": "",
+            "hintText": {
+                "male": "",
+                "female": ""
+            },
             "fTextX": 280,
             "hTextX": 250,
             "board": [
@@ -76,14 +103,23 @@
             "storyText": "-- infected our digital files so you will need to locate all the infected usb drives we have."
         },
         {
-            "standardImage": ["passport"],
-            "locateImage": "passportBlack",
+            "standardImage": {
+                "male":["passport"],
+                "female":["passport"]
+            },
+            "locateImage": {
+                "male": "passportBlack",
+                "female": "passportBlack"
+            },
             "locateFunction": "colour",
             "params": null,
             "locateNum": 5,
             "particles": "bullet",
             "findText": "Passports to Find: ",
-            "hintText": "",
+            "hintText": {
+                "male": "",
+                "female": ""
+            },
             "fTextX": 280,
             "hTextX": 250,
             "board": [
@@ -101,14 +137,23 @@
             "storyText": "-- has several phony passports round up all the ones you can find to discover ___ alias."
         },
         {
-            "standardImage": ["blonde", "white", "black", "red"],
-            "locateImage": "brown",
+            "standardImage": {
+                "male": ["blondeF", "whiteF", "blackF", "redF"],
+                "female": ["brownM", "whiteM", "blackM", "redM", "greyM"]
+            },
+            "locateImage": {
+                "male": "brownF",
+                "female": "blondM"
+            },
             "locateFunction": "colour",
             "params": null,
             "locateNum": 15,
             "particles": "bullet",
             "findText": "Double Agents to Find: ",
-            "hintText": "(Hint: Enemy agents are Brunettes)",
+            "hintText": {
+                "male": "(Hint: Enemy agents are Brunettes)",
+                "female": "(Hint: Enemy agents are Blonds)"
+            },
             "fTextX": 310,
             "hTextX": 250,
             "board": [

@@ -149,10 +149,6 @@ Locator.StoryState = {
     {
         return string.charAt(0).toUpperCase() + string.slice(1);
     },
-    proceed: function()
-    {
-        this.state.start('Game');
-    },
     nextLine: function()
     {
         if(this.imageIndex+1 != this.gameData.storySpecs.images.length && this.lineIndex > this.imageLine)
@@ -168,6 +164,10 @@ Locator.StoryState = {
         if (this.lineIndex === this.content.length)
         {
             //  We're finished
+            this.yesButton = this.add.button(800, 500, 'passport', function()
+            {
+                this.state.start('Game');
+            }, this);
             return;
         }
         else if(this.content[this.lineIndex].charAt(0).match(/[a-z]/i) || this.content[this.lineIndex].includes("\t"))
