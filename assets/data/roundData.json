@@ -48,7 +48,7 @@
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
-            "storyText": "Find ___ fingerprint to update our files."
+            "storyText": "Find ___ fingerprints to update our files."
         },
         {
             "standardImage": ["usb"],
@@ -73,7 +73,7 @@
                   ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "L"]
                 ],
-            "storyText": "__ infected our digital files so you will need to locate all the infected usb drives we have."
+            "storyText": "-- infected our digital files so you will need to locate all the infected usb drives we have."
         },
         {
             "standardImage": ["passport"],
@@ -98,7 +98,7 @@
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
-            "storyText": "__ has several phony passports round up all the ones you can find to discover ___ alias."
+            "storyText": "-- has several phony passports round up all the ones you can find to discover ___ alias."
         },
         {
             "standardImage": ["blonde", "white", "black", "red"],
@@ -127,7 +127,7 @@
         }
     ],
     "StoryText":[
-        "Hello Agent, I have some terrible news. Your partner agent ____, <show black and white shot> it turns out __ is a double agent. Agent we need you to find agent ____ and bring ___ in.  __ cleared our files of all information about ___ so we are at a complete loss without you. Our Intel tells us agent ____ was planning an assassination of an official overseas. In order to stop ___ you will need to do _ things:",
+        "Hello Agent, I have some terrible news. Your partner agent ____, it turns out __ is a double agent. Agent we need you to find agent ____ and bring ___ in.  -- cleared our files of all information about ---- so we are at a complete loss without you. Our Intel tells us agent ____ was planning an assassination of an official overseas. In order to stop ___ you will need to do _ things:",
         "Can you do it Agent?"
     ],
     "nameM": "Man",
