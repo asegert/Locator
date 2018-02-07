@@ -22,7 +22,8 @@
                   ["S", "S", "L", "S", "S", "L", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
-                ]
+                ],
+            "storyText": "Round up all of agent ____’s guns, __ has silencers on all of them so it should be easy to find them."
         },
         {
             "standardImage": ["fingerprintR"],
@@ -31,7 +32,7 @@
             "params": 1,
             "locateNum": 7,
             "particles": "bullet",
-            "findText": "Guns with Silencers to Find: ",
+            "findText": "FingerPrints to Find: ",
             "hintText": "",
             "fTextX": 280,
             "hTextX": 250,
@@ -46,7 +47,8 @@
                   ["S", "S", "S", "S", "S", "L", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
-                ]
+                ],
+            "storyText": "Find ___ fingerprint to update our files."
         },
         {
             "standardImage": ["usb"],
@@ -70,7 +72,8 @@
                   ["S", "L", "S", "S", "S", "S", "L", "L", "S", "S"],
                   ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "L"]
-                ]
+                ],
+            "storyText": "__ infected our digital files so you will need to locate all the infected usb drives we have."
         },
         {
             "standardImage": ["passport"],
@@ -79,7 +82,7 @@
             "params": null,
             "locateNum": 5,
             "particles": "bullet",
-            "findText": "Enemy Passports to Find: ",
+            "findText": "Passports to Find: ",
             "hintText": "",
             "fTextX": 280,
             "hTextX": 250,
@@ -94,7 +97,8 @@
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
-                ]
+                ],
+            "storyText": "__ has several phony passports round up all the ones you can find to discover ___ alias."
         },
         {
             "standardImage": ["blonde", "white", "black", "red"],
@@ -103,7 +107,7 @@
             "params": null,
             "locateNum": 15,
             "particles": "bullet",
-            "findText": "Enemy Agents to Find: ",
+            "findText": "Double Agents to Find: ",
             "hintText": "(Hint: Enemy agents are Brunettes)",
             "fTextX": 310,
             "hTextX": 250,
@@ -118,7 +122,14 @@
                   ["S", "S", "L", "S", "S", "L", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "L", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
-                ]
+                ],
+            "storyText": "Finally using all this information locate ___ and bring ___ in."
         }
-    ]
+    ],
+    "StoryText":[
+        "Hello Agent, I have some terrible news. Your partner agent ____, <show black and white shot> it turns out __ is a double agent. Agent we need you to find agent ____ and bring ___ in.  __ cleared our files of all information about ___ so we are at a complete loss without you. Our Intel tells us agent ____ was planning an assassination of an official overseas. In order to stop ___ you will need to do _ things:",
+        "Can you do it Agent?"
+    ],
+    "nameM": "Man",
+    "nameF": "Woman"
 }

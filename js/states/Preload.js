@@ -29,6 +29,8 @@ Locator.PreloadState = {
                              ['red', 'assets/images/ladyRedSmall.png'],
                              ['fingerprintR', 'assets/images/fingerprintRight.png'],
                              ['fingerprintL', 'assets/images/fingerprintLeft.png'],
+                             ['male', 'assets/images/male.png'],
+                             ['female', 'assets/images/female.png'],
 	                    ],
             'spritesheet': [
                             ['gunSprite', 'assets/images/gunSprite.png', 52, 39, 5],
