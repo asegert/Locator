@@ -68,7 +68,7 @@ Locator.GameState = {
                         this.moving = true;
                         if(gameData.rounds[this.currRound].locateFunction == 'spritesheet')
                         {
-                            this.spritesheetTransition(gameData.rounds[this.currRound].params, button);
+                            this.spritesheetTransition(gameData.rounds[this.currRound].params[Locator.gender], button);
                         }
                         else if(gameData.rounds[this.currRound].locateFunction == 'colour')
                         {
@@ -127,7 +127,7 @@ Locator.GameState = {
     },
     rotateTransition: function(button)
     {
-        var tween = this.add.tween(button).to( { rotation: this.gameData.rounds[this.currRound].params}, 200, Phaser.Easing.Bounce.Out, true);
+        var tween = this.add.tween(button).to( { rotation: this.gameData.rounds[this.currRound].params[Locator.gender]}, 200, Phaser.Easing.Bounce.Out, true);
         tween.onComplete.add(function(button)
         {
             button.rotation = 0;

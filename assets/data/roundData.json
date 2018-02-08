@@ -10,7 +10,10 @@
                 "female": "silencerGun"
             },
             "locateFunction": "spritesheet",
-            "params": "gunSprite",
+            "params": {
+                "male": "gunSprite",
+                "female": "gunSprite"
+            },
             "locateNum": 15,
             "particles": "bullet",
             "findText": "Guns with Silencers to Find: ",
@@ -44,7 +47,10 @@
                 "female": "fingerprintL"
             },
             "locateFunction": "rotate",
-            "params": 1,
+            "params": {
+                "male": 1,
+                "female": 1
+            },
             "locateNum": 10,
             "particles": "bullet",
             "findText": "FingerPrints to Find: ",
@@ -70,6 +76,43 @@
         },
         {
             "standardImage": {
+                "male":["folderLB", "folderLBL", "folderLBR", "folderLR", "folderLW"],
+                "female":["folderMB", "folderMBL", "folderMBR", "folderMG", "folderMR", "folderMW"]
+            },
+            "locateImage": {
+                "male": "folder",
+                "female": "folder"
+            },
+            "locateFunction": "spritesheet",
+            "params": {
+                "male": "folderSpriteLady",
+                "female": "folderSpriteMan"
+            },
+            "locateNum": 10,
+            "particles": "bullet",
+            "findText": "Folders to Update: ",
+            "hintText": {
+                "male": "The folders without Images of your Partner",
+                "female": "The folders without Images  of your Partner"
+            },
+            "fTextX": 280,
+            "hTextX": 250,
+            "board": [
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "L", "L", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "L", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "L", "S", "S", "L", "L", "S"],
+                  ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "L", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["L", "S", "S", "L", "S", "S", "S", "S", "S", "S"]
+                ],
+            "storyText": "Update Agent ____'s new files with all the information you collected."
+        },
+        {
+            "standardImage": {
                 "male":["usb"],
                 "female":["usb"]
             },
@@ -78,7 +121,10 @@
                 "female": "usbYellow"
             },
             "locateFunction": "colour",
-            "params": null,
+            "params": {
+                "male": null,
+                "female": null
+            },
             "locateNum": 7,
             "particles": "bullet",
             "findText": "Compromised USBs to Find: ",
@@ -112,7 +158,10 @@
                 "female": "passportBlack"
             },
             "locateFunction": "colour",
-            "params": null,
+            "params": {
+                "male": null,
+                "female": null
+            },
             "locateNum": 7,
             "particles": "bullet",
             "findText": "Passports to Find: ",
@@ -146,7 +195,10 @@
                 "female": "blondM"
             },
             "locateFunction": "colour",
-            "params": null,
+            "params": {
+                "male": null,
+                "female": null
+            },
             "locateNum": 1,
             "particles": "bullet",
             "findText": "Double Agents to Find: ",
@@ -225,6 +277,14 @@
             },
             {
                 "line": 13,
+                "word": 5,
+                "x": 960,
+                "y": 0,
+                "image": "folderImage",
+                "rotation": -6.5
+            },
+            {
+                "line": 15,
                 "word": 13,
                 "x": 0,
                 "y": 0,
@@ -232,7 +292,7 @@
                 "rotation": -6
             },
             {
-                "line": 15,
+                "line": 17,
                 "word": 5,
                 "x": 960,
                 "y": 0,
