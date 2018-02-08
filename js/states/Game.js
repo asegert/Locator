@@ -127,7 +127,7 @@ Locator.GameState = {
     },
     rotateTransition: function(button)
     {
-        var tween = this.add.tween(button).to( { rotation: this.gameData.rounds[this.currRound].params}, 1000, Phaser.Easing.Bounce.Out, true);
+        var tween = this.add.tween(button).to( { rotation: this.gameData.rounds[this.currRound].params}, 200, Phaser.Easing.Bounce.Out, true);
         tween.onComplete.add(function(button)
         {
             button.rotation = 0;
@@ -180,6 +180,7 @@ Locator.GameState = {
         this.hint.destroy();
         this.rotators.removeAll();
         this.others.removeAll();
+        this.state.start('End');
     }
 }
 /*Copyright (C) Wayside Co. - All Rights Reserved

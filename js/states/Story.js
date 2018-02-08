@@ -72,7 +72,7 @@ Locator.StoryState = {
         this.content[this.content.length] = "\n\n";
         this.content = this.content.concat(this.processText(this.gameData.StoryText[1], Locator.gender, this.gameData.storySpecs.mainOffset, this.gameData.storySpecs.indentMain));//Maybe Center, large, buttonize?
         
-        this.displayStoryText = this.add.text(150, 500, '', { font: "15px Arial", fill: "#19de65" });
+        this.displayStoryText = this.add.text(150, 500, '', { font: "15px Arial", fill: "#19de65", stroke: '#000000', strokeThickness: 5 });
 
         this.nextLine();
     },
@@ -197,7 +197,7 @@ Locator.StoryState = {
     {
         if(this.lineIndex == this.imageLine && this.wordIndex == this.imageWord)
         {
-            var image = this.add.sprite(0, 0, this.gameData.storySpecs.images[this.imageIndex].image);
+            var image = this.add.sprite(this.gameData.storySpecs.images[this.imageIndex].x, this.gameData.storySpecs.images[this.imageIndex].y, this.gameData.storySpecs.images[this.imageIndex].image);
             image.anchor.setTo(0.5, 0.5);
             image.scale.setTo(0.1, 0.1);
             
@@ -235,3 +235,7 @@ Locator.StoryState = {
         }
     }
 };
+/*Copyright (C) Wayside Co. - All Rights Reserved
+* Unauthorized copying of this file, via any medium is strictly prohibited
+* Proprietary and confidential
+* Written and maintained by Wayside Co <info@waysideco.ca>, 2018*/

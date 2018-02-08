@@ -23,6 +23,7 @@ if(Phaser.Device.ie)
         Locator.game.state.add('Preload', Locator.PreloadState); 
         Locator.game.state.add('Game', Locator.GameState);
         Locator.game.state.add('Story', Locator.StoryState);
+        Locator.game.state.add('End', Locator.EndState);
 
         Locator.game.state.start('Cache'); 
     }
@@ -37,6 +38,7 @@ else
     Locator.game.state.add('Preload', Locator.PreloadState); 
     Locator.game.state.add('Game', Locator.GameState);
     Locator.game.state.add('Story', Locator.StoryState);
+    Locator.game.state.add('End', Locator.EndState);
 
     Locator.game.state.start('Cache');
 }

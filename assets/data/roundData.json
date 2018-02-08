@@ -11,7 +11,7 @@
             },
             "locateFunction": "spritesheet",
             "params": "gunSprite",
-            "locateNum": 10,
+            "locateNum": 15,
             "particles": "bullet",
             "findText": "Guns with Silencers to Find: ",
             "hintText": {
@@ -22,14 +22,14 @@
             "hTextX": 250,
             "board": [
                   ["S", "S", "S", "L", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "L", "S", "S", "L", "S", "S", "S", "L"],
                   ["S", "S", "S", "S", "S", "S", "L", "S", "S", "S"],
                   ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "L", "S", "S", "S", "L", "S"],
-                  ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "L", "S", "S", "S", "S", "S", "L", "S", "S"],
                   ["S", "S", "L", "S", "S", "L", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "L", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
             "storyText": "Round up all of agent ____’s guns, __ has silencers on all of them so it should be easy to find them."
@@ -45,7 +45,7 @@
             },
             "locateFunction": "rotate",
             "params": 1,
-            "locateNum": 7,
+            "locateNum": 10,
             "particles": "bullet",
             "findText": "FingerPrints to Find: ",
             "hintText": {
@@ -56,15 +56,15 @@
             "hTextX": 250,
             "board": [
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "L", "L", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "L", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "L", "S", "S", "S", "L", "S"],
+                  ["S", "S", "S", "S", "L", "S", "S", "L", "L", "S"],
                   ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "L", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
+                  ["L", "S", "S", "L", "S", "S", "S", "S", "S", "S"]
                 ],
             "storyText": "Find - fingerprints to update our files."
         },
@@ -79,7 +79,7 @@
             },
             "locateFunction": "colour",
             "params": null,
-            "locateNum": 25,
+            "locateNum": 7,
             "particles": "bullet",
             "findText": "Compromised USBs to Find: ",
             "hintText": {
@@ -90,15 +90,15 @@
             "hTextX": 250,
             "board": [
                   ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
-                  ["L", "S", "L", "S", "S", "S", "S", "L", "S", "L"],
-                  ["S", "S", "S", "S", "S", "L", "L", "S", "S", "S"],
-                  ["S", "S", "L", "S", "S", "S", "L", "S", "L", "S"],
-                  ["L", "S", "S", "L", "L", "S", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "S", "S", "S", "L", "S", "L"],
-                  ["S", "S", "L", "S", "L", "L", "S", "S", "L", "S"],
-                  ["S", "L", "S", "S", "S", "S", "L", "L", "S", "S"],
-                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
-                  ["L", "S", "S", "S", "S", "S", "S", "S", "S", "L"]
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "L"],
+                  ["S", "S", "S", "S", "S", "L", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["L", "S", "S", "L", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "L", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "L", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
             "storyText": "-- infected our digital files so you will need to locate all the infected usb drives we have."
         },
@@ -113,7 +113,7 @@
             },
             "locateFunction": "colour",
             "params": null,
-            "locateNum": 5,
+            "locateNum": 7,
             "particles": "bullet",
             "findText": "Passports to Find: ",
             "hintText": {
@@ -125,13 +125,13 @@
             "board": [
                   ["S", "S", "S", "L", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "L", "S", "S", "S"],
+                  ["L", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "l", "S", "S", "L", "S"],
                   ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "S", "S", "S", "S", "L", "S"],
-                  ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "l", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
             "storyText": "-- has several phony passports round up all the ones you can find to discover ___ alias."
@@ -147,7 +147,7 @@
             },
             "locateFunction": "colour",
             "params": null,
-            "locateNum": 15,
+            "locateNum": 1,
             "particles": "bullet",
             "findText": "Double Agents to Find: ",
             "hintText": {
@@ -157,16 +157,16 @@
             "fTextX": 310,
             "hTextX": 250,
             "board": [
-                  ["S", "S", "S", "L", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "L"],
-                  ["S", "S", "S", "S", "S", "L", "L", "S", "S", "S"],
-                  ["L", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "L", "S", "S", "L", "L", "S"],
-                  ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "L", "S", "S", "L", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "S", "S", "S", "S", "L", "S"],
-                  ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "L", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
             "storyText": "Finally using all this information locate ___ and bring ___ in."
         }
@@ -186,11 +186,61 @@
             {
                 "line": 1,
                 "word": 12,
+                "x": 0,
+                "y": 0,
                 "image": "partners",
                 "rotation": 6.5
+            },
+            {
+                "line": 2,
+                "word": 17,
+                "x": 960,
+                "y": 0,
+                "image": "thief",
+                "rotation": -6.5
+            },
+            {
+                "line": 4,
+                "word": 11,
+                "x": 0,
+                "y": 0,
+                "image": "overseas",
+                "rotation": 6.5
+            },
+            {
+                "line": 8,
+                "word": 8,
+                "x": 0,
+                "y": 0,
+                "image": "gunImage",
+                "rotation": 6.5
+            },
+            {
+                "line": 11,
+                "word": 4,
+                "x": 960,
+                "y": 0,
+                "image": "fingerprintImage",
+                "rotation": 0
+            },
+            {
+                "line": 13,
+                "word": 13,
+                "x": 0,
+                "y": 0,
+                "image": "usbImage",
+                "rotation": -6
+            },
+            {
+                "line": 15,
+                "word": 5,
+                "x": 960,
+                "y": 0,
+                "image": "passportImage",
+                "rotation": -6.5
             }
         ],
-     "wordDelay": 120,
-     "lineDelay": 400
+     "wordDelay": 200,
+     "lineDelay": 500
     }
 }

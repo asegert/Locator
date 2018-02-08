@@ -39,6 +39,17 @@ Locator.PreloadState = {
                              ['female', 'assets/images/female.png'],
                              ['commander', 'assets/images/commander.png'],
                              ['partners', 'assets/images/partners.png'],
+                             ['thief', 'assets/images/thief.png'],
+                             ['overseas', 'assets/images/overseas.png'],
+                             ['usbImage', 'assets/images/usbImage.png'],
+                             ['passportImage', 'assets/images/passportImage.png'],
+                             ['gunImage', 'assets/images/gunImage.png'],
+                             ['fingerprintImage', 'assets/images/fingerprintImage.png'],
+                             ['prison', 'assets/images/prison.png'],
+                             ['prisonMale', 'assets/images/prisonMale.png'],
+                             ['prisonFemale', 'assets/images/prisonFemale.png'],
+
+
 	                    ],
             'spritesheet': [
                             ['gunSprite', 'assets/images/gunSprite.png', 52, 39, 5],
