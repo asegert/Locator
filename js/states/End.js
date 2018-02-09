@@ -3,21 +3,23 @@ var Locator = Locator || {};
 Locator.EndState = {
     create: function ()
     {
+        this.add.sprite(0, 0, 'prisonCell');
+        
         if(Locator.gender=='male')
         {
-            this.prisoner = this.add.sprite(this.world.centerX, this.world.centerY, 'prisonFemale');
+            this.prisoner = this.add.sprite(this.world.centerX, this.world.centerY + 10, 'prisonFemale');
             this.prisoner.anchor.setTo(0.5, 0.5);
         }
         else
         {
-            this.prisoner = this.add.sprite(this.world.centerX, this.world.centerY, 'prisonMale');
+            this.prisoner = this.add.sprite(this.world.centerX, this.world.centerY + 10, 'prisonMale');
             this.prisoner.anchor.setTo(0.5, 0.5);
         }
         
-        this.add.sprite(0, this.world.centerY - 150, 'prison');
-        this.add.sprite(132, this.world.centerY - 150, 'prison');
+        this.add.sprite(0, 0, 'prison');
+        this.add.sprite(132, 0, 'prison');
         
-        this.prison = this.add.sprite(this.world.centerX - 129, this.world.centerY - 150, 'prison');
+        this.prison = this.add.sprite(this.world.centerX - 129, 0, 'prison');
         //this.prison.anchor.setTo(0.5, 0.5);
         this.prison.scale.setTo(0, 1);
         
@@ -28,8 +30,8 @@ Locator.EndState = {
             this.game.camera.shake(0.01, 200);
         }, this);
         
-        this.add.sprite(572, this.world.centerY - 150, 'prison');
-        this.add.sprite(748, this.world.centerY - 150, 'prison');
+        this.add.sprite(572, 0, 'prison');
+        this.add.sprite(748, 0, 'prison');
     }
 };
 /*Copyright (C) Wayside Co. - All Rights Reserved

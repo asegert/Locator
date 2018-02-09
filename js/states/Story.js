@@ -3,6 +3,23 @@ var Locator = Locator || {};
 Locator.StoryState = {
     create: function ()
     {
+        this.bgBack = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'bg');
+        this.bgBack.anchor.setTo(0.5, 0.5);
+        
+        /*this.game.time.events.loop(Phaser.Timer.SECOND/6, function()
+        {
+            var circle = this.add.sprite(Locator.StoryState.game.world.centerX -18, Locator.StoryState.game.world.centerY -18, 'circle');
+            circle.anchor.setTo(0.5, 0.5);
+        
+            this.add.tween(circle.scale).to({x: 8, y: 8}, 4000, "Linear", true);
+            this.world.bringToTop(this.male);
+            this.world.bringToTop(this.female);
+            this.world.bringToTop(this.text);
+            this.world.bringToTop(this.agent);
+        }, this);*/
+        
+        
+        
         //Stores all data from JSON file
         this.gameData= JSON.parse(this.game.cache.getText('roundData'));
         
@@ -21,9 +38,9 @@ Locator.StoryState = {
         
         this.images = new Array();
         
-        this.text = this.add.text(0, 0, "Choose your Agent");
-        this.male = this.add.button(300, 350, 'male', this.chosen);
-        this.female = this.add.button(500, 350, 'female', this.chosen);
+        this.text = this.add.text(200, 300, "Choose your Agent", {fill: '#ffffff', font: '75px'});
+        this.male = this.add.button(230, 450, 'male', this.chosen);
+        this.female = this.add.button(570, 450, 'female', this.chosen);
         this.agent = this.add.button(700, 400, 'fingerprintL', function()
         {
             this.startRealStory();

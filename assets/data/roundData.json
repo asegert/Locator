@@ -35,7 +35,8 @@
                   ["S", "S", "S", "L", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
-            "storyText": "Round up all of agent ____’s guns, __ has silencers on all of them so it should be easy to find them."
+            "storyText": "Round up all of agent ____’s guns, __ has silencers on all of them so it should be easy to find them.",
+            "roundCompleteText": "Great work! Now that we have Agent ____’s gun we can get - fingerprints."
         },
         {
             "standardImage": {
@@ -52,7 +53,7 @@
                 "female": 1
             },
             "locateNum": 10,
-            "particles": "bullet",
+            "particles": "magnify",
             "findText": "FingerPrints to Find: ",
             "hintText": {
                 "male": "",
@@ -72,12 +73,13 @@
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "L", "S", "S", "S", "S", "S", "S"]
                 ],
-            "storyText": "Find - fingerprints to update our files."
+            "storyText": "Find - fingerprints to update our files.",
+            "roundCompleteText": "Great Work! Now we can update our files with - fingerprints."
         },
         {
             "standardImage": {
-                "male":["folderLB", "folderLBL", "folderLBR", "folderLR", "folderLW"],
-                "female":["folderMB", "folderMBL", "folderMBR", "folderMG", "folderMR", "folderMW"]
+                "male":["folderLW", "folderLB", "folderLBL", "folderLBR", "folderLR"],
+                "female":["folderMW", "folderMB", "folderMBL", "folderMBR", "folderMG", "folderMR"]
             },
             "locateImage": {
                 "male": "folder",
@@ -89,7 +91,7 @@
                 "female": "folderSpriteMan"
             },
             "locateNum": 10,
-            "particles": "bullet",
+            "particles": "paperclip",
             "findText": "Folders to Update: ",
             "hintText": {
                 "male": "The folders without Images of your Partner",
@@ -109,7 +111,8 @@
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "L", "S", "S", "S", "S", "S", "S"]
                 ],
-            "storyText": "Update Agent ____'s new files with all the information you collected."
+            "storyText": "Update Agent ____'s new files with all the information you collected.",
+            "roundCompleteText": "Great Work Updating the Files! Now you can fix our digital files."
         },
         {
             "standardImage": {
@@ -126,7 +129,7 @@
                 "female": null
             },
             "locateNum": 7,
-            "particles": "bullet",
+            "particles": "virus",
             "findText": "Compromised USBs to Find: ",
             "hintText": {
                 "male": "",
@@ -146,7 +149,8 @@
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
-            "storyText": "-- infected our digital files so you will need to locate all the infected usb drives we have."
+            "storyText": "-- infected our digital files so you will need to locate all the infected usb drives we have.",
+            "roundCompleteText": "Great Work! Now you can look at - passports and find the missing one so we can learn which alias __ is using."
         },
         {
             "standardImage": {
@@ -163,7 +167,7 @@
                 "female": null
             },
             "locateNum": 7,
-            "particles": "bullet",
+            "particles": "globe",
             "findText": "Passports to Find: ",
             "hintText": {
                 "male": "",
@@ -183,12 +187,13 @@
                   ["S", "S", "l", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
-            "storyText": "-- has several phony passports round up all the ones you can find to discover ___ alias."
+            "storyText": "-- has several phony passports round up all the ones you can find to discover - alias.",
+            "roundCompleteText": "Great Work! Let’s get ___."
         },
         {
             "standardImage": {
-                "male": ["blondeF", "whiteF", "blackF", "redF"],
-                "female": ["brownM", "whiteM", "blackM", "redM", "greyM"]
+                "male": ["whiteF", "blondeF", "blackF", "redF"],
+                "female": ["whiteM", "brownM", "blackM", "redM", "greyM"]
             },
             "locateImage": {
                 "male": "brownF",
@@ -200,7 +205,7 @@
                 "female": null
             },
             "locateNum": 1,
-            "particles": "bullet",
+            "particles": "handcuffs",
             "findText": "Double Agents to Find: ",
             "hintText": {
                 "male": "(Hint: Enemy agents are Brunettes)",
@@ -220,11 +225,12 @@
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
-            "storyText": "Finally using all this information locate ___ and bring ___ in."
+            "storyText": "Finally using all this information locate ___ and bring ___ in.",
+            "roundCompleteText": null
         }
     ],
     "StoryText":[
-        "Hello Agent, I have some terrible news. Your partner agent ____, it turns out __ is a double agent. Agent we need you to find agent ____ and bring ___ in.  -- cleared our files of all information about ---- so we are at a complete loss without you. Our Intel tells us agent ____ was planning an assassination of an official overseas. In order to stop ___ you will need to do _ things:",
+        "Hello Agent, I have some terrible news. Your partner agent ____, it turns out __ is a double agent. Agent we need you to find agent ____ and bring ___ in.  -- cleared our files of all information about ---- so we are at a complete loss without you. Our Intel tells us agent ____ is planning an assassination of an official overseas. In order to stop ___ you will need to do _ things:",
         "Can you do it Agent?"
     ],
     "nameM": "Man",

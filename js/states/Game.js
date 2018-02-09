@@ -171,7 +171,44 @@ Locator.GameState = {
         this.hintText.destroy()
         this.totalText = this.add.text(this.gameData.rounds[this.currRound].fTextX, 0, this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n");
         this.hintText = this.add.text(this.gameData.rounds[this.currRound].hTextX, 50, this.gameData.rounds[this.currRound].hintText[Locator.gender]);
+        
         this.initBoard(this.gameData);
+        this.createDocket();
+        
+    },
+    createDocket: function()
+    {
+        if(Locator.gender == 'female')
+        {
+            this.continue = this.add.sprite(250, 0, 'maleContinue');
+        }
+        else
+        {
+            this.continue = this.add.sprite(250, 0, 'femaleContinue');
+        }
+        
+        var textContent = Locator.StoryState.processText(this.gameData.rounds[this.currRound-1].roundCompleteText, Locator.gender, 35, "");
+        var displayText = "";
+        for(var i = 0, len = textContent.length; i< len; i++)
+        {
+            displayText += textContent[i];
+        }
+        
+        this.continueText = this.add.text(320, 300, displayText, {font: '24px', strokeThickness: 2, stroke: '#000000'});
+        this.continueText.lineSpacing = -5;
+        
+        //Grab old image, new image and display on docket
+        this.oldIcon = this.add.sprite(350, 200, this.gameData.rounds[this.currRound-1].standardImage[Locator.gender][0]);
+        this.newIcon = this.add.sprite(550, 400, this.gameData.rounds[this.currRound].standardImage[Locator.gender][0]);
+        
+        this.continueButton = this.add.button(650, 400, 'fingerprintR', function()
+        {
+            this.oldIcon.destroy();
+            this.newIcon.destroy();
+            this.continue.destroy();
+            this.continueText.destroy();
+            this.continueButton.destroy();
+        }, this);
     },
     endGame: function()
     {
