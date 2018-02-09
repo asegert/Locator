@@ -28,6 +28,13 @@ Locator.EndState = {
         slam.onComplete.add(function()
         {
             this.game.camera.shake(0.01, 200);
+            this.game.time.events.add(200, function()
+            {
+                this.add.button(800, 500, 'prize', function()
+                {
+                    document.getElementById("form1").submit();
+                }, this);
+            }, this);
         }, this);
         
         this.add.sprite(572, 0, 'prison');

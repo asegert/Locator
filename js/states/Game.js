@@ -8,6 +8,7 @@ Locator.GameState = {
         //Stores all data from JSON file
         this.gameData= JSON.parse(this.game.cache.getText('roundData'));
         this.currRound = 0;
+        this.bg = this.add.sprite(0, 0, this.gameData.rounds[this.currRound].bg);
         //Boolean to check if a horseshoe is currently rotating
         this.moving = false;
         //Holds all the 'unlucky' horseshoes
@@ -17,8 +18,8 @@ Locator.GameState = {
         //Total unlucky ones to find
         this.totalUnlucky = this.gameData.rounds[this.currRound].locateNum;
         //Displays what needs to be found
-        this.totalText = this.add.text(this.gameData.rounds[this.currRound].fTextX, 0, this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n");
-        this.hintText = this.add.text(this.gameData.rounds[this.currRound].hTextX, 50, this.gameData.rounds[this.currRound].hintText[Locator.gender]);
+        this.totalText = this.add.text(this.gameData.rounds[this.currRound].fTextX, 0, this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n", {fill: '#ffffff'});
+        this.hintText = this.add.text(this.gameData.rounds[this.currRound].hTextX, 50, this.gameData.rounds[this.currRound].hintText[Locator.gender], {fill: '#ffffff'});
         
         this.hint = this.add.sprite(0, 0, 'hint');
         this.hint.inputEnabled = true;
@@ -78,8 +79,8 @@ Locator.GameState = {
                         {
                             this.rotateTransition(button);
                         }
-                        this.totalText.setText(this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n");
-                        this.hintText.setText(this.gameData.rounds[this.currRound].hintText[Locator.gender]);
+                        this.totalText.setText(this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n", {fill: '#ffffff'});
+                        this.hintText.setText(this.gameData.rounds[this.currRound].hintText[Locator.gender], {fill: '#ffffff'});
                     }
                 }, this);
                 
@@ -169,9 +170,10 @@ Locator.GameState = {
         this.totalUnlucky = this.gameData.rounds[this.currRound].locateNum;
         this.totalText.destroy();
         this.hintText.destroy()
-        this.totalText = this.add.text(this.gameData.rounds[this.currRound].fTextX, 0, this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n");
-        this.hintText = this.add.text(this.gameData.rounds[this.currRound].hTextX, 50, this.gameData.rounds[this.currRound].hintText[Locator.gender]);
+        this.totalText = this.add.text(this.gameData.rounds[this.currRound].fTextX, 0, this.gameData.rounds[this.currRound].findText+this.totalUnlucky + "\n", {fill: '#ffffff'});
+        this.hintText = this.add.text(this.gameData.rounds[this.currRound].hTextX, 50, this.gameData.rounds[this.currRound].hintText[Locator.gender], {fill: '#ffffff'});
         
+        this.bg.loadTexture(this.gameData.rounds[this.currRound].bg);
         this.initBoard(this.gameData);
         this.createDocket();
         
@@ -201,7 +203,7 @@ Locator.GameState = {
         this.oldIcon = this.add.sprite(350, 200, this.gameData.rounds[this.currRound-1].standardImage[Locator.gender][0]);
         this.newIcon = this.add.sprite(550, 400, this.gameData.rounds[this.currRound].standardImage[Locator.gender][0]);
         
-        this.continueButton = this.add.button(650, 400, 'fingerprintR', function()
+        this.continueButton = this.add.button(570, 450, 'continue', function()
         {
             this.oldIcon.destroy();
             this.newIcon.destroy();
@@ -209,6 +211,7 @@ Locator.GameState = {
             this.continueText.destroy();
             this.continueButton.destroy();
         }, this);
+        this.continueButton.scale.setTo(0.7, 0.7);
     },
     endGame: function()
     {

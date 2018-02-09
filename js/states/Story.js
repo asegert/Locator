@@ -39,12 +39,14 @@ Locator.StoryState = {
         this.images = new Array();
         
         this.text = this.add.text(200, 300, "Choose your Agent", {fill: '#ffffff', font: '75px'});
-        this.male = this.add.button(230, 450, 'male', this.chosen);
-        this.female = this.add.button(570, 450, 'female', this.chosen);
-        this.agent = this.add.button(700, 400, 'fingerprintL', function()
+        this.male = this.add.button(150, 400, 'male', this.chosen);
+        this.female = this.add.button(520, 400, 'female', this.chosen);
+        this.agent = this.add.button(800, 550, 'continue', function()
         {
             this.startRealStory();
         }, this);
+        this.agent.alpha = 0;
+        this.agent.input.enabled = false;
     },
     chosen: function()
     {
@@ -54,6 +56,8 @@ Locator.StoryState = {
         this.this.female.alpha = 1;
         this.alpha = 0.5;
         Locator.gender = this.key;
+        this.this.agent.alpha = 1;
+        this.this.agent.input.enabled = true;
         
     },
     startRealStory: function()
@@ -87,7 +91,7 @@ Locator.StoryState = {
             this.content = this.content.concat(this.processText(this.gameData.rounds[i].storyText, Locator.gender, this.gameData.storySpecs.secondaryOffset, this.gameData.storySpecs.indentSecondary));
         }
         this.content[this.content.length] = "\n\n";
-        this.content = this.content.concat(this.processText(this.gameData.StoryText[1], Locator.gender, this.gameData.storySpecs.mainOffset, this.gameData.storySpecs.indentMain));//Maybe Center, large, buttonize?
+        this.content = this.content.concat(this.processText(this.gameData.StoryText[1], Locator.gender, this.gameData.storySpecs.mainOffset, this.gameData.storySpecs.indentMain));
         
         this.displayStoryText = this.add.text(150, 500, '', { font: "15px Arial", fill: "#19de65", stroke: '#000000', strokeThickness: 5 });
 
@@ -181,7 +185,7 @@ Locator.StoryState = {
         if (this.lineIndex === this.content.length)
         {
             //  We're finished
-            this.yesButton = this.add.button(800, 500, 'passport', function()
+            this.yesButton = this.add.button(700, 500, 'yes', function()
             {
                 this.state.start('Game');
             }, this);
