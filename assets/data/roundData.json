@@ -92,24 +92,24 @@
                 "male": "folderSpriteLady",
                 "female": "folderSpriteMan"
             },
-            "locateNum": 10,
+            "locateNum": 7,
             "particles": "paperclip",
             "findText": "Folders to Update: ",
             "hintText": {
                 "male": "The folders without Images of your Partner",
                 "female": "The folders without Images  of your Partner"
             },
-            "fTextX": 280,
+            "fTextX": 350,
             "hTextX": 250,
             "bg": "gamebg",
             "board": [
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "L", "L", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "S", "S", "L", "S", "S", "S"],
+                  ["S", "S", "L", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "L", "S", "S", "L"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "L", "S", "S", "L", "L", "S"],
-                  ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "L", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "L", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "L", "S", "S", "S", "S", "S", "S"]
@@ -131,7 +131,7 @@
                 "male": null,
                 "female": null
             },
-            "locateNum": 7,
+            "locateNum": 5,
             "particles": "virus",
             "findText": "Compromised USBs to Find: ",
             "hintText": {
@@ -146,10 +146,10 @@
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "L"],
                   ["S", "S", "S", "S", "S", "L", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["L", "S", "S", "L", "S", "S", "S", "S", "S", "S"],
+                  ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "L", "S"],
-                  ["S", "S", "S", "S", "S", "S", "S", "L", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
@@ -170,7 +170,7 @@
                 "male": null,
                 "female": null
             },
-            "locateNum": 7,
+            "locateNum": 6,
             "particles": "globe",
             "findText": "Passports to Find: ",
             "hintText": {
@@ -184,15 +184,15 @@
                   ["S", "S", "S", "L", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "L", "S", "S", "S"],
-                  ["L", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
+                  ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "S", "S", "S", "l", "S", "S", "L", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "L", "S"],
                   ["S", "L", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
-                  ["S", "S", "l", "S", "S", "S", "S", "S", "S", "S"],
+                  ["S", "S", "S", "S", "S", "S", "S", "S", "S", "S"],
                   ["L", "S", "S", "S", "S", "S", "S", "S", "S", "S"]
                 ],
-            "storyText": "-- has several phony passports round up all the ones you can find to discover - alias.",
+            "storyText": "-- has several phony passports, round up all the ones you can find to discover the alias __ is using.",
             "roundCompleteText": "Great Work! Let’s get ___."
         },
         {
@@ -239,8 +239,8 @@
         "Hello Agent, I have some terrible news. Your partner agent ____, it turns out __ is a double agent. Agent we need you to find agent ____ and bring ___ in.  -- cleared our files of all information about ---- so we are at a complete loss without you. Our Intel tells us agent ____ is planning an assassination of an official overseas. In order to stop ___ you will need to do _ things:",
         "Can you do it Agent?"
     ],
-    "nameM": "Man",
-    "nameF": "Woman",
+    "nameM": "Anton",
+    "nameF": "Natalya",
     "storySpecs":{
         "mainOffset": 90,
         "secondaryOffset": 95,
